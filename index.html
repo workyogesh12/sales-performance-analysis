@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sales Performance Analysis Dashboard</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header class="hero">
+    <h1>Sales Performance Analysis Dashboard</h1>
+    <p>Analyzing sales, profit, regions, categories and top products</p>
+  </header>
+
+  <main class="container">
+
+    <section class="intro-card">
+      <h2>Project Objective</h2>
+      <p>
+        This dashboard analyzes sales data of a small online store to identify
+        total sales, total profit, top performing categories, regional performance,
+        monthly trends and best-selling products.
+      </p>
+    </section>
+
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <h3>Total Sales</h3>
+        <p id="totalSales">Loading...</p>
+      </div>
+
+      <div class="kpi-card">
+        <h3>Total Profit</h3>
+        <p id="totalProfit">Loading...</p>
+      </div>
+
+      <div class="kpi-card">
+        <h3>Total Orders</h3>
+        <p id="totalOrders">Loading...</p>
+      </div>
+
+      <div class="kpi-card">
+        <h3>Best Region</h3>
+        <p id="bestRegion">Loading...</p>
+      </div>
+    </section>
+
+    <section class="insight-box">
+      <h2>Key Business Insights</h2>
+
+      <ul id="insightsList">
+        <li>Loading insights...</li>
+      </ul>
+    </section>
+
+    <section class="charts-grid">
+      <div class="chart-card">
+        <h2>Sales by Category</h2>
+        <canvas id="categoryChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h2>Profit by Region</h2>
+        <canvas id="regionChart"></canvas>
+      </div>
+
+      <div class="chart-card full-width">
+        <h2>Monthly Sales Trend</h2>
+        <canvas id="monthlyChart"></canvas>
+      </div>
+
+      <div class="chart-card full-width">
+        <h2>Top 10 Products by Sales</h2>
+        <canvas id="productChart"></canvas>
+      </div>
+    </section>
+
+    <section class="table-card">
+      <h2>Sales Dataset Preview</h2>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Date</th>
+              <th>Region</th>
+              <th>Category</th>
+              <th>Product</th>
+              <th>Sales</th>
+              <th>Profit</th>
+              <th>Qty</th>
+            </tr>
+          </thead>
+
+          <tbody id="salesTableBody">
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Built using HTML, CSS, JavaScript and Chart.js</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
